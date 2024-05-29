@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}
+Register
+{% endblock title %}
+
+{% block body %}
+    <center style="background: linear-gradient(to right,crimson,white,aqua);">
+        <h1 style="color: blue;">Registration Page</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{EUFO.as_p}}
+            {{EPFO.as_p}}
+            <input type="submit" value="register" style="background-color: crimson;height: 30px;width: 100px;">
+        </form>
+    </center>
+{% endblock body %}
